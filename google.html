@@ -5,15 +5,110 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Google</title>
     <link rel="shorcut icon" href="google_icon.png">
-    <link rel="stylesheet" href="google.css">
     <link rel="stylesheet" href="font-awesome/css/all.css">
+    <script src="jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="google.css">
+    <script src="google.js"></script>
 </head>
 <body>
     <header>
         <ul>
             <li><a href="#">Gmail</a></li>
             <li><a href="#">Images</a></li>
-            <li><a class="nine-dot" title="Google apps"></a></li>
+            <li>
+                <a class="nine-dot" title="Google apps" onclick="sublist()"></a>
+                <div class="hidden-bg">
+                    <div class="hidden">
+                        <ul class="nine-dot-list">
+                            <li><a href="#">
+                                <img src="labron.jpg" alt="">
+                                <h3>Account</h3>
+                            </a></li>
+                            <li><a href="#">
+                                <img src="labron.jpg" alt="">
+                                <h3>Account</h3>
+                            </a></li>
+                            <li><a href="#">
+                                <img src="labron.jpg" alt="">
+                                <h3>Account</h3>
+                            </a></li>
+                            <li><a href="#">
+                                <img src="labron.jpg" alt="">
+                                <h3>Account</h3>
+                            </a></li>
+                            <li><a href="#">
+                                <img src="labron.jpg" alt="">
+                                <h3>Account</h3>
+                            </a></li>
+                            <li><a href="#">
+                                <img src="labron.jpg" alt="">
+                                <h3>Account</h3>
+                            </a></li>
+                            <li><a href="#">
+                                <img src="labron.jpg" alt="">
+                                <h3>Account</h3>
+                            </a></li>
+                            <li><a href="#">
+                                <img src="labron.jpg" alt="">
+                                <h3>Account</h3>
+                            </a></li>
+                            <li><a href="#">
+                                <img src="labron.jpg" alt="">
+                                <h3>Account</h3>
+                            </a></li>
+                            <li><a href="#">
+                                <img src="labron.jpg" alt="">
+                                <h3>Account</h3>
+                            </a></li>
+                            <li><a href="#">
+                                <img src="labron.jpg" alt="">
+                                <h3>Account</h3>
+                            </a></li>
+                        </ul>
+                        <ul class="nine-dot-list">
+                            <li><a href="#">
+                                <img src="labron.jpg" alt="">
+                                <h3>Account</h3>
+                            </a></li>
+                            <li><a href="#">
+                                <img src="labron.jpg" alt="">
+                                <h3>Account</h3>
+                            </a></li>
+                            <li><a href="#">
+                                <img src="labron.jpg" alt="">
+                                <h3>Account</h3>
+                            </a></li>
+                            <li><a href="#">
+                                <img src="labron.jpg" alt="">
+                                <h3>Account</h3>
+                            </a></li>
+                            <li><a href="#">
+                                <img src="labron.jpg" alt="">
+                                <h3>Account</h3>
+                            </a></li>
+                            <li><a href="#">
+                                <img src="labron.jpg" alt="">
+                                <h3>Account</h3>
+                            </a></li>
+                            <li><a href="#">
+                                <img src="labron.jpg" alt="">
+                                <h3>Account</h3>
+                            </a></li>
+                            <li><a href="#">
+                                <img src="labron.jpg" alt="">
+                                <h3>Account</h3>
+                            </a></li>
+                            <li><a href="#">
+                                <img src="labron.jpg" alt="">
+                                <h3>Account</h3>
+                            </a></li>
+                            <div class="more-from-google">
+                                <a href="#">More from Google</a>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </li>
             <li><a class="avatar" title="Google Account: Lonzo Ball  
 (lonzoball@gmail.com)"></a></li>
         </ul>
@@ -25,8 +120,15 @@
             </div>
             <form action="" class="search-engine">
                 <i class="fa fa-search icon-search"></i>
-                <input type="text" title="Search">
+                <input type="text" title="Search" id="search-keys">
                 <i class="micro" title="Search by voice"></i>
+                <div class="history-list">
+                    <div class="history">
+                        <i class="far fa-clock"></i>
+                        <p>lịch sử tìm kiếm</p>
+                        <button>Remove</button>
+                    </div>
+                </div>
                 <ul>
                     <li><button type="submit">Google Search</button></li>
                     <li><button type="submit">I'm Feeling Lucky</button></li>
@@ -59,5 +161,16 @@
             </ul>
         </div>
     </footer>
+    
+    <script>
+        $('#search-keys').focus(function(){
+            $('.history-list')[0].style.display = 'block';
+            $('.history-list')[0].style.boxShadow = '0px 1px 6px rgb(32,33,36,0.28)';
+        });
+        $('#search-keys').blur(function(){
+            $('.history-list')[0].style.display = 'none';
+            $('.history-list')[0].style.boxShadow = 'none';
+        });
+    </script>
 </body>
 </html>
