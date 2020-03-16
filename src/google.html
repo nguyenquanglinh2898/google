@@ -1,0 +1,176 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Google</title>
+    <link rel="shorcut icon" href="../image/google_icon.png">
+    <link rel="stylesheet" href="../font-awesome/css/all.css">
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="../css/google.css">
+    <script src="../js/google.js"></script>
+</head>
+<body>
+    <header>
+        <ul>
+            <li><a href="#">Gmail</a></li>
+            <li><a href="#">Images</a></li>
+            <li>
+                <a class="nine-dot" title="Google apps" onclick="sublist()"></a>
+                <div class="hidden-bg">
+                    <div class="hidden">
+                        <ul class="nine-dot-list">
+                            <li><a href="#">
+                                <img src="../image/labron.jpg" alt="">
+                                <h3>Account</h3>
+                            </a></li>
+                            <li><a href="#">
+                                <img src="../image/labron.jpg" alt="">
+                                <h3>Account</h3>
+                            </a></li>
+                            <li><a href="#">
+                                <img src="../image/labron.jpg" alt="">
+                                <h3>Account</h3>
+                            </a></li>
+                            <li><a href="#">
+                                <img src="../image/labron.jpg" alt="">
+                                <h3>Account</h3>
+                            </a></li>
+                            <li><a href="#">
+                                <img src="../image/labron.jpg" alt="">
+                                <h3>Account</h3>
+                            </a></li>
+                            <li><a href="#">
+                                <img src="../image/labron.jpg" alt="">
+                                <h3>Account</h3>
+                            </a></li>
+                            <li><a href="#">
+                                <img src="../image/labron.jpg" alt="">
+                                <h3>Account</h3>
+                            </a></li>
+                            <li><a href="#">
+                                <img src="../image/labron.jpg" alt="">
+                                <h3>Account</h3>
+                            </a></li>
+                            <li><a href="#">
+                                <img src="../image/labron.jpg" alt="">
+                                <h3>Account</h3>
+                            </a></li>
+                            <li><a href="#">
+                                <img src="../image/labron.jpg" alt="">
+                                <h3>Account</h3>
+                            </a></li>
+                            <li><a href="#">
+                                <img src="../image/labron.jpg" alt="">
+                                <h3>Account</h3>
+                            </a></li>
+                        </ul>
+                        <ul class="nine-dot-list">
+                            <li><a href="#">
+                                <img src="../image/labron.jpg" alt="">
+                                <h3>Account</h3>
+                            </a></li>
+                            <li><a href="#">
+                                <img src="../image/labron.jpg" alt="">
+                                <h3>Account</h3>
+                            </a></li>
+                            <li><a href="#">
+                                <img src="../image/labron.jpg" alt="">
+                                <h3>Account</h3>
+                            </a></li>
+                            <li><a href="#">
+                                <img src="../image/labron.jpg" alt="">
+                                <h3>Account</h3>
+                            </a></li>
+                            <li><a href="#">
+                                <img src="../image/labron.jpg" alt="">
+                                <h3>Account</h3>
+                            </a></li>
+                            <li><a href="#">
+                                <img src="../image/labron.jpg" alt="">
+                                <h3>Account</h3>
+                            </a></li>
+                            <li><a href="#">
+                                <img src="../image/labron.jpg" alt="">
+                                <h3>Account</h3>
+                            </a></li>
+                            <li><a href="#">
+                                <img src="../image/labron.jpg" alt="">
+                                <h3>Account</h3>
+                            </a></li>
+                            <li><a href="#">
+                                <img src="../image/labron.jpg" alt="">
+                                <h3>Account</h3>
+                            </a></li>
+                            <div class="more-from-google">
+                                <a href="#">More from Google</a>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li><a class="avatar" title="Google Account: Lonzo Ball  
+(lonzoball@gmail.com)"></a></li>
+        </ul>
+    </header>
+    <div class="main">
+        <div class="container">
+            <div class="logo">
+                <img src="../image/googlelogo_color_272x92dp.png" alt="logo">
+            </div>
+            <form action="result.php" class="search-engine" method="GET" autocomplete="off">
+                <i class="fa fa-search icon-search"></i>
+                <input type="text" title="Search" id="search-keys">
+                <i class="micro" title="Search by voice"></i>
+                <div class="history-list">
+                    <div class="history">
+                        <i class="far fa-clock"></i>
+                        <p>lịch sử tìm kiếm</p>
+                        <button>Remove</button>
+                    </div>
+                </div>
+                <ul>
+                    <li><button type="submit">Google Search</button></li>
+                    <li><button type="submit">I'm Feeling Lucky</button></li>
+                </ul>
+            </form>
+            <div class="language">
+                <ul>Google offered in:
+                    <li><a href="#">Tiếng Việt</a></li>
+                    <li><a href="#">Français</a></li>
+                    <li><a href="#">中文（繁體）</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="row1">
+            <p class="country">Vietnam</p>
+        </div>
+        <div class="row2">
+            <ul class="fl">
+                <li><a href="#">Advertising</a></li>
+                <li><a href="#">Business</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">How Search works</a></li>
+            </ul>
+            <ul class="fr">
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Terms</a></li>
+                <li><a href="#">Settings</a></li>
+            </ul>
+        </div>
+    </footer>
+    
+    <script>
+        $('#search-keys').focus(function(){
+            $('.history-list')[0].style.display = 'block';
+            $('.history-list')[0].style.boxShadow = '0px 1px 6px rgb(32,33,36,0.28)';
+        });
+        $('#search-keys').blur(function(){
+            $('.history-list')[0].style.display = 'none';
+            $('.history-list')[0].style.boxShadow = 'none';
+        });
+    </script>
+</body>
+</html>
