@@ -11,15 +11,29 @@
     <script src="../js/google.js"></script>
 </head>
 <body>
+<?php 
+    $servername = "mysql";
+    $username = "root";
+    $password = "123456";
+    $database = "google";
+    
+    // Tạo kết nối
+    $conn = new mysqli($servername, $username, $password, $database); 
+    
+    $sql = "SELECT * FROM article WHERE article.title LIKE '%".$_GET["search-keys"]."%' 
+    OR article.desc LIKE '%".$_GET["search-keys"]."%'";
+
+    $result = $conn->query($sql);
+?>
     <header>
         <div class="brand">
             <a href="#">
                 <img src="../image/googlelogo_color_92x30dp.png" alt="">
             </a>
         </div>
-        <form action="" class="search-engine">
+        <form action="result.php" class="search-engine" method="$_GET">
             <i class="fa fa-search icon-search"></i>
-            <input type="text" title="Search" id="search-keys" value="kyrie irving">
+            <input type="text" title="Search" name="search-keys" id="search-keys" value="<?php echo $_GET["search-keys"] ?>" autocomplete="off">
             <div class="history-list">
                 <div class="history">
                     <i class="far fa-clock"></i>
@@ -132,13 +146,21 @@
         <div class="left">
             <p class="result-stat">About 32,000,000 results (0.63 seconds)</p>
             <div class="result">
+                <?php
+                foreach( $result as $row ){
+                ?>
                 <div class="result-item">
                     <a href="#" class="title">
-                        <span class="link">www.basketball-reference.com › Players › I</span>
-                        <h3>Kyrie Irving Stats | Basketball-Reference.com</h3>
+                    <span class="link"><?php echo $row['link'] ?></span>
+                        <h3><?php echo $row['title'] ?></h3>
                     </a>
-                    <p class="short-content">Kyrie Irving - Career stats, game logs, biographical info, awards, and achievements for the NBA, NCAA, and International leagues.</p>
+                    <p class="short-content"><?php echo $row['desc'] ?></p>
                 </div>
+                <?php
+                }
+                ?>
+                
+                        
             </div>
             <div class="related">
                 <h3>Searches related to kyrie irving</h3>
